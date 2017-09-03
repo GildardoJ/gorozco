@@ -1,0 +1,52 @@
+
+body{
+    background-color:black;
+    text-align: center;
+}
+
+
+#titleTag{
+    color:yellow;
+    font-family: inherit;
+    text-align: center;
+}
+
+
+
+
+
+div{
+    display: inline-block;
+}
+
+
+#fall{
+    border-bottom-left-radius: 50px;
+    margin-left:5px;
+    
+}
+
+#spring{
+    border-top-left-radius: 50px;
+    display: inline-block;
+}
+
+#winter{
+    border-bottom-right-radius: 50px;
+    margin-right:5px;
+}
+
+#summer{
+    border-top-right-radius: 50px;
+    display: inline-block;
+}
+
+img:hover{
+    transform: scale(1.5);
+}
+
+h2{
+    text-align: center;
+    
+    color: white;
+}
