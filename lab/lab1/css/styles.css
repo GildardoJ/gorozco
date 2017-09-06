@@ -3,13 +3,19 @@ body {
     color:gray;
 }
 
+h1 {
+    
+font-family: 'Libre Barcode 39 Text', cursive;
+font-size: 4em;
+margin-bottom: 0px;
+}
 header, main, nav, footer {
     text-align: center;
     
 }
 
 nav a { /* link withing "nav" cointainer */
-    padding:15px;
+    padding: 15px;
     padding-bottom:4px;
     font-size: 1.8em;
     text-decoration: none; /* removes underline */
@@ -24,13 +30,24 @@ nav a:hover {
 #me, #welcomeText {
     float: left;
 }
+
+#welcomeText {
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 50px;
+    width:200px;
+    font-size: 1.em;
+}
 footer{
     clear: left;
-    font-size: 1em;
+    font-size: .9em;
+    color: red;
 }
+
 
 table {
     margin: 0px auto;
+    
 }
 
 td {
