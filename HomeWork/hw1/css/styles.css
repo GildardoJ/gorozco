@@ -1,0 +1,57 @@
+body {
+    background-color:black;
+    color:magenta;
+}
+header, main, nav, footer {
+    text-align: center;
+    
+}
+hr {
+    color:red;
+    display:block;
+}
+
+h1 {
+    
+font-family: 'Baloo Tammudu', cursive;
+font-size: 4em;
+margin-bottom: 0px;
+color: gray;
+}
+
+nav a { /* link withing "nav" cointainer */
+    padding: 15px;
+    padding-bottom:4px;
+    font-size: 1.8em;
+    text-decoration: none; /* removes underline */
+    color: white;  /* by default, link are blue */
+}
+nav a:hover {
+    border-bottom:2px green solid;
+    font-size: 2em;
+    transition: .8s; /*transition effect*/
+}
+main {
+    margin: auto;
+    width:50%;
+}
+#me, #welcomeText {
+    float: left;
+    color:white;
+    margin: auto;
+   
+}
+#welcomeText {
+    text-align: left;
+   padding-left: 10px;
+    padding-top: 0px;
+   
+    width:200px;
+    font-size: 1.em;
+    margin:20px;
+}
+footer{
+    clear: left;
+    font-size: .9em;
+    color: red;
+}

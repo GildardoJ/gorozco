@@ -5,6 +5,6 @@
         <title>Welcome Page!</title>
     </head>
     <body>
-        <a href="http://alftorres-cst336.herokuapp.com/labs/lab1/homePage.html" >Welcome!</a>
+        <a href="" >Welcome!</a>
     </body>
 </html>
