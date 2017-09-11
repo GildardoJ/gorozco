@@ -29,9 +29,7 @@
     <body>
         <div id="main">
             <?php
-            
                 play();
-           
             ?>
             
             <form>
