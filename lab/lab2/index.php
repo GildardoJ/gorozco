@@ -1,67 +1,46 @@
+<?php
+
+    include 'inc/functions.php';
+?>
+
+<script type="text/javascript">
+    function play_sound() {
+        var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', '/gorozco/lab/lab2/music/ding.flac');
+        audioElement.setAttribute('autoplay', 'autoplay');
+        audioElement.load();
+        audioElement.play();
+    }
+</script>
+
 <!DOCTYPE html>
 <html>
     <head>
         <title> 777 Slot Machine </title>
         <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        
+        <style>
+            @import url("css/styles.css");
+        </style>
     </head>
+    
+    
     <body>
-        
-        <?php
-        
-        function displaySymbol($randomValue) {
-           // $randomValue = rand(0,2);
+        <div id="main">
+            <?php
             
-            switch ($randomValue ) {
-                
-                case 0: $symbol = "orange";
-                        break;
-                case 1: $symbol = "lemon";
-                        break;
-                case 2: $symbol = "grapes";
-                        break;        
-            }
-        
-        echo "<img src='img/$symbol.png' alt='$symbol' tittle=\"$symbol\" width=\"70\"/>";
-        
-    //    function displayPoints = 1000
-        }
-        
-        $randomValue1 = rand(0,2);
-        displaySymbol($randomValue1);
-        $randomValue2 = rand(0,2);
-        displaySymbol($randomValue2);
-        $randomValue3 = rand(0,2);
-        displaySymbol($randomValue3);
-
-        echo "<img src='img/$symbol.png' alt='$symbol' tittle=\"$symbol\" width=\"70\"/>";
- 
-       // $symbol7 = "orange";
-        
-
-        /*
-        if ($randomValue == 0) {
+                play();
+           
+            ?>
             
-            $symbol = "seven";
-            
-        } else if ( $randomValue == 1) {
-            
-            $symbol = "lemon";
-            
-        }else {
-            
-            $symbol = "grapes";
-            
-        }
-        */
+            <form>
+                <input type="submit" value="Spin!"/>
+            </form>
+           
         
-        
-        
-       // echo $randomValue;
-        
-       // $symbol7 = $randomValue;
-        
-        
-        ?>
+        </div>
         
     </body>
 </html>
+

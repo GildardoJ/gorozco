@@ -12,15 +12,15 @@
     }
     
     #main {
-        font-family: 'Baloo Bhaina', cursive;
+        font-family: 'Merriweather', serif;
         background-image:url("../img/machine.png");
-        width:600px;
+        width:700px;
         height:500px;
         position:relative;
         margin:0 auto;
     }
     
-    #reel1, #reel2, #reel3 {
+    #reel1, #reel2, #reel3{
         top:248px;
         position:absolute;
     }
@@ -33,6 +33,11 @@
     }
     #reel3{
         left:357px;
+    }
+    #reel4{
+        top:248px;
+        left: 0px;
+        position: absolute;
     }
     
     input{
@@ -59,7 +64,7 @@
     }
     
     footer{
-        font-family: "Times New Roman", Georgia, Serif;
+        font-family: 'Merriweather', serif;
         font-size:.8em;
         width:600px;
         margin:0 auto;
