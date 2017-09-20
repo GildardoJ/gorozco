@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+
+img {
+    border-radius:20px;
+}
+
+body {
+    background-color: black;
+    color: white;
+    
+}
+table{
+    width:800px;
+    margin:0 auto;
+}
+
+table, th, td {
+    
+    border: 1px white;
+    
+    padding: 20px;
+    color: White;
+    border-collapse: collapse;
+    border-spacing: 5px;
+   
+    
+}
+
+#transparent{
+  background:rgba(255,255,255,0.5);
+}
+
+#main {
+    font-family: 'Merriweather', serif;
+    
+    margin-top: 70px;
+    
+    position:relative;
+    margin:0 auto;
+}
+
+header {
+    text-align: center;
+}
+
+
+input{
+    top:25px;
+    left:35px;
+    position:absolute;
+    font-size:1.3em;
+    background-color: transparent;
+    border:none;
+    outline:none; /*hides button outline when clicking on it*/
+    font-weight:bold;
+    color:brown;
+    cursor:pointer;
+}
+
+#output{
+ width:600px;   
+ margin:0 auto;
+ position:absolute;
+ text-align:center;
+ top:450px;
+ font-size:1.5em;
+ line-height: .7em;
+}
+
+footer{
+    font-family: 'Merriweather', serif;
+    font-size:.8em;
+    width:600px;
+    margin:0 auto;
+    padding-top:10px;
+}

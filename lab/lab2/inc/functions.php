@@ -53,10 +53,11 @@
           // echo "<h2> price moeny = $priceMoney ! </h2>";
             for ($i=1; $i<5; $i++){
                 ${"randomValue" . $i } = rand(0,3);
-                displaySymbol(${"randomValue" . $i},$i);
+               // displaySymbol(${"randomValue" . $i},$i);
+               echo " lines";
             }
             
-            displayPoints($randomValue1, $randomValue2, $randomValue3,$randomValue4);
+          //  displayPoints($randomValue1, $randomValue2, $randomValue3,$randomValue4);
         }
         
         
