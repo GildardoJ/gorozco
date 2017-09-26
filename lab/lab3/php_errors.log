@@ -1,0 +1,16 @@
+[23-Sep-2017 00:53:10 UTC] PHP Fatal error:  Call to undefined function play() in /home/ubuntu/workspace/lab3/cst336lab3/index.php on line 31
+[23-Sep-2017 00:53:10 UTC] PHP Stack trace:
+[23-Sep-2017 00:53:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/lab3/cst336lab3/index.php:0
+[23-Sep-2017 00:55:12 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/lab3/cst336lab3/functions.php on line 15
+[23-Sep-2017 00:55:12 UTC] PHP Stack trace:
+[23-Sep-2017 00:55:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/lab3/cst336lab3/index.php:0
+[23-Sep-2017 00:55:12 UTC] PHP   2. elapsedTime() /home/ubuntu/workspace/lab3/cst336lab3/index.php:35
+[23-Sep-2017 01:04:33 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/lab3/cst336lab3/functions.php on line 100
+[23-Sep-2017 01:04:33 UTC] PHP Stack trace:
+[23-Sep-2017 01:04:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/lab3/cst336lab3/index.php:0
+[23-Sep-2017 01:08:16 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/lab3/cst336lab3/functions.php on line 106
+[23-Sep-2017 01:08:16 UTC] PHP Stack trace:
+[23-Sep-2017 01:08:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/lab3/cst336lab3/index.php:0
+[23-Sep-2017 01:08:50 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/lab3/cst336lab3/functions.php on line 105
+[23-Sep-2017 01:08:50 UTC] PHP Stack trace:
+[23-Sep-2017 01:08:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/lab3/cst336lab3/index.php:0

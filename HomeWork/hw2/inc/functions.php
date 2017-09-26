@@ -36,7 +36,7 @@
                 
             }    
           
-          echo "</table>";
+            echo "</table>";
             
         }
         
