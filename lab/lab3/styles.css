@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+p {
+    
+}
+.container {
+    width: 50%;
+    max-width: 1000%;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    background-color: #f1f1f1;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+}
+
+#page-title {
+    margin: 0;
+    padding-top: 3px;
+}
+
+.player-field {
+    max-height: 100px !important;
+    width: 100%;
+    overflow: hidden;
+    background-color: #eee;
+    margin: 5px;
+}
+
+.image-object {
+    max-height: inherit;
+    float: left;
+    margin-top: auto;
+    padding: 2px;
+}
+
+.player-points {
+    float: right;
+}
+
+.end-field {
+    text-align: center;
+}
