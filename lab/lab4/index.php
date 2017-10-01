@@ -84,8 +84,7 @@
                 <option <?=checkIFSelected('Otters')?> >Otters</option>
                 <option <?=checkIFSelected('Sky')?> >Sky</option>
             </select>
-            <br>
-            <br>
+           
             <input type="submit" value="Search"  />
             
             </div> 
