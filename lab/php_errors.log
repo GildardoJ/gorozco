@@ -5,3 +5,37 @@
 [10-Sep-2017 22:14:07 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gorozco/lab/lab2/inc/functions.php on line 41
 [10-Sep-2017 22:14:07 UTC] PHP Stack trace:
 [10-Sep-2017 22:14:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab2/index.php:0
+[29-Sep-2017 20:01:00 UTC] PHP Fatal error:  Call to undefined function checkIFSelected() in /home/ubuntu/workspace/gorozco/lab/lab4/index.php on line 93
+[29-Sep-2017 20:01:00 UTC] PHP Stack trace:
+[29-Sep-2017 20:01:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab4/index.php:0
+[29-Sep-2017 20:01:11 UTC] PHP Fatal error:  Call to undefined function checkIFSelected() in /home/ubuntu/workspace/gorozco/lab/lab4/index.php on line 93
+[29-Sep-2017 20:01:11 UTC] PHP Stack trace:
+[29-Sep-2017 20:01:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab4/index.php:0
+[29-Sep-2017 20:01:12 UTC] PHP Fatal error:  Call to undefined function checkIFSelected() in /home/ubuntu/workspace/gorozco/lab/lab4/index.php on line 93
+[29-Sep-2017 20:01:12 UTC] PHP Stack trace:
+[29-Sep-2017 20:01:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab4/index.php:0
+[29-Sep-2017 20:01:19 UTC] PHP Fatal error:  Call to undefined function checkIFSelected() in /home/ubuntu/workspace/gorozco/lab/lab4/index.php on line 93
+[29-Sep-2017 20:01:19 UTC] PHP Stack trace:
+[29-Sep-2017 20:01:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab4/index.php:0
+[29-Sep-2017 20:02:39 UTC] PHP Fatal error:  Call to undefined function checkIFSelected() in /home/ubuntu/workspace/gorozco/lab/lab4/index.php on line 93
+[29-Sep-2017 20:02:39 UTC] PHP Stack trace:
+[29-Sep-2017 20:02:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab4/index.php:0
+[29-Sep-2017 20:02:46 UTC] PHP Fatal error:  Call to undefined function checkIFSelected() in /home/ubuntu/workspace/gorozco/lab/lab4/index.php on line 93
+[29-Sep-2017 20:02:46 UTC] PHP Stack trace:
+[29-Sep-2017 20:02:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab4/index.php:0
+[29-Sep-2017 20:02:55 UTC] PHP Fatal error:  Call to undefined function checkIFSelected() in /home/ubuntu/workspace/gorozco/lab/lab4/index.php on line 93
+[29-Sep-2017 20:02:55 UTC] PHP Stack trace:
+[29-Sep-2017 20:02:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab4/index.php:0
+[29-Sep-2017 20:03:03 UTC] PHP Fatal error:  Call to undefined function checkIFSelected() in /home/ubuntu/workspace/gorozco/lab/lab4/index.php on line 93
+[29-Sep-2017 20:03:03 UTC] PHP Stack trace:
+[29-Sep-2017 20:03:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab4/index.php:0
+[29-Sep-2017 20:19:00 UTC] PHP Fatal error:  Maximum execution time of 300 seconds exceeded in /home/ubuntu/workspace/gorozco/lab/lab4/index.php on line 133
+[29-Sep-2017 20:19:00 UTC] PHP Stack trace:
+[29-Sep-2017 20:19:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab4/index.php:0
+[01-Oct-2017 19:50:39 UTC] PHP Fatal error:  Maximum execution time of 300 seconds exceeded in /home/ubuntu/workspace/gorozco/lab/lab4/index.php on line 121
+[01-Oct-2017 19:50:39 UTC] PHP Stack trace:
+[01-Oct-2017 19:50:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab4/index.php:0
+[01-Oct-2017 19:50:43 UTC] PHP Fatal error:  Maximum execution time of 300 seconds exceeded in /home/ubuntu/workspace/gorozco/lab/lab4/index.php on line 121
+[01-Oct-2017 19:50:43 UTC] PHP Stack trace:
+[01-Oct-2017 19:50:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab4/index.php:0
+[01-Oct-2017 20:17:22 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ';' in /home/ubuntu/workspace/gorozco/lab/lab4/index.php on line 67
