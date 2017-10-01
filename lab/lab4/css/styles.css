@@ -2,14 +2,20 @@
         opacity:0.9;
         width:100%;
         text-align:center;
-        color:yellow;
+        color:brown;
     }
     
     input {
-        font-size: 3em;
+        font-size: 1.7em;
         color: black;
+        border-radius: 12px;
     }
-    
+    #formBox {
+        display: inline-block;
+        border-radius: 12px;
+        background-color: white;
+        padding: 10px;
+    }
     #carousel-example-generic {
          margin: 0 auto;   
          width: 700px;

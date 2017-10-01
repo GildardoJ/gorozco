@@ -55,7 +55,8 @@
     <body>
         <br/><br/>
         
-        <form> <!--get method standard -->
+        <form > <!--get method standard -->
+        <div id= "formBox">
             <input type="text" name="keyword" placeholder ="Keyword" value="<?=$_GET['keyword']?>"/>
             
             <input type="radio" id="lhorizontal" name="layout" value="horizontal" <?= ($_GET['layout']=='horizontal')?"checked":"" ?> >
@@ -72,17 +73,22 @@
             >
             
             <label for="lvertical"> Vertical</label>
+           
             
             <select name="category">
                 <option value=""> Select One </option>
+                <option <?=checkIFSelected('Corolla')?>>Corolla</option>
                 <option <?=checkIFSelected('ocean')?>>Oceon</option>
                 <option <?=checkIFSelected('Forest')?> >Forest </option>
                 <option <?=checkIFSelected('Mountain')?> >Mountain </option>
                 <option <?=checkIFSelected('Otters')?> >Otters</option>
                 <option <?=checkIFSelected('Sky')?> >Sky</option>
             </select>
-            
+            <br>
+            <br>
             <input type="submit" value="Search"  />
+            
+            </div> 
             
         </form>
      
