@@ -53,6 +53,7 @@
     </head>
     
     <body>
+        <br/><br/>
         
         <form> <!--get method standard -->
             <input type="text" name="keyword" placeholder ="Keyword" value="<?=$_GET['keyword']?>"/>
