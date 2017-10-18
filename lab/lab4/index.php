@@ -1,12 +1,17 @@
 <?php
 
     $backgroundImage = "img/sea.jpg";
+    
+    
     // API call goes here
     if (isset($_GET['keyword'])){  // checks to see if the url has a parameter called "keyword"
-       // echo "keyword for: " .  $_GET['keyword'];
+    
+        echo "keyword for: " .  $_GET['keyword'];
+        
         include 'api/pixabayAPI.php';
         
         $keyword = $_GET['keyword'];
+        
         if(!empty($_GET['category'])) {
             
             $keyword = $_GET['category'];
@@ -17,9 +22,7 @@
           $imageURLs = getImageURLs($keyword, $_GET['layout']);  
           
         }else{
-            
             $imageURLs =getImageURLs($keyword);
-        
         }
         
         $backgroundImage = $imageURLs[array_rand($imageURLs)];

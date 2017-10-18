@@ -14,6 +14,7 @@ function getImageURLs($keyword, $orientation="horizontal") {
         "cache-control: no-cache"
       ),
     ));
+    
     $jsonData = curl_exec($curl);
     $data = json_decode($jsonData, true); //true makes it an array!
     
@@ -23,11 +24,10 @@ function getImageURLs($keyword, $orientation="horizontal") {
      // $imageURLs[] = $data['item'][$i]['mediumImage'];
     }
     
+
+    
     $err = curl_error($curl);
     curl_close($curl);
-    
-    echo "in function getImageURLs!";
-
     
     return $imageURLs;
 }
