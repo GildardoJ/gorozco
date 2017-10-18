@@ -265,3 +265,15 @@ Stack trace:
 #1 /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php(35): displayCheckoutHistory()
 #2 {main}
   thrown in /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php on line 17
+[18-Oct-2017 00:13:43 UTC] PHP Warning:  include(../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php on line 5
+[18-Oct-2017 00:13:43 UTC] PHP Stack trace:
+[18-Oct-2017 00:13:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:0
+[18-Oct-2017 00:13:43 UTC] PHP   2. displayCheckoutHistory() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:40
+[18-Oct-2017 00:13:43 UTC] PHP Warning:  include(): Failed opening '../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php on line 5
+[18-Oct-2017 00:13:43 UTC] PHP Stack trace:
+[18-Oct-2017 00:13:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:0
+[18-Oct-2017 00:13:43 UTC] PHP   2. displayCheckoutHistory() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:40
+[18-Oct-2017 00:13:43 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php on line 7
+[18-Oct-2017 00:13:43 UTC] PHP Stack trace:
+[18-Oct-2017 00:13:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:0
+[18-Oct-2017 00:13:43 UTC] PHP   2. displayCheckoutHistory() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:40

@@ -78,7 +78,7 @@ function displayDevices(){
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lab 5: Device Search </title>
+        <title> -Lab 5: Device Search- </title>
     </head>
     <body>
         
@@ -105,11 +105,7 @@ function displayDevices(){
             <input type="submit" value="Search!" name="submit" >
         </form>
         
-        
         <hr>
-        
         <?=displayDevices()?>
-        
-
     </body>
 </html>
