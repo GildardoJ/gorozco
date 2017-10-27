@@ -101,15 +101,7 @@
                     break;
                
             }
-           /* 
-            for($j=$randCollum; $j< $randCollum+1; $j++){  // creat 15x15 table filled with random letters
-                
-                for ($i= $randRow; $i< ($randRow + $strlen); $i++){
-                    
-                    $letters[$j][$i] = $wordArr[$iterate] ;
-                    $iterate++;
-                }
-            } */
+       
         }
    
     

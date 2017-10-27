@@ -2,7 +2,7 @@
 <?php
 
 //returns array with 100 URLs to images from Pixabay.com, based on a "keyword"
-function getImageURLs($keyword,&$imageDescription,&$numb,$sort = "relevance") {
+function getImageURLs($keyword,&$imageDescription,&$price, $sort = "new") {
   
     $curl = curl_init();
     curl_setopt_array($curl, array( 
@@ -25,18 +25,21 @@ function getImageURLs($keyword,&$imageDescription,&$numb,$sort = "relevance") {
     for ($i = 0; $i < 10; $i++) {
        $imageURLs[] = $data['items'][$i]['mediumImage'];
        $imageDescription[] = $data['items'][$i]['shortDescription'];
+       $price[] = $data['items'][$i]['salePrice'];
     }
     
     $err = curl_error($curl);
     curl_close($curl);
     
-    echo " sizeof array()  + " . $numb . " ";
-    echo sizeof($imageURLs);
+    //echo " sizeof array()  + " . $numb . " ";
+    //echo sizeof($imageURLs);
    // echo " in function getImageURLs! ". $data['numItems'] . " ";
     
-    print_r($imageURLs);
-    echo " in function getImageURLs! ". $data['numItems'] . " ";
-    print_r($imageDescription);
+    //print_r($imageURLs);
+    //echo " in function getImageURLs! ". $data['numItems'] . " ";
+    //print_r($imageDescription);
+    
+    echo " in function getImageURLs! ". $sort . " ";
     
     return $imageURLs;
 }

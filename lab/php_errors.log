@@ -277,3 +277,173 @@ Stack trace:
 [18-Oct-2017 00:13:43 UTC] PHP Stack trace:
 [18-Oct-2017 00:13:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:0
 [18-Oct-2017 00:13:43 UTC] PHP   2. displayCheckoutHistory() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:40
+[18-Oct-2017 00:38:54 UTC] PHP Warning:  include(../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php on line 5
+[18-Oct-2017 00:38:54 UTC] PHP Stack trace:
+[18-Oct-2017 00:38:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:0
+[18-Oct-2017 00:38:54 UTC] PHP   2. displayCheckoutHistory() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:40
+[18-Oct-2017 00:38:54 UTC] PHP Warning:  include(): Failed opening '../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php on line 5
+[18-Oct-2017 00:38:54 UTC] PHP Stack trace:
+[18-Oct-2017 00:38:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:0
+[18-Oct-2017 00:38:54 UTC] PHP   2. displayCheckoutHistory() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:40
+[18-Oct-2017 00:38:54 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php on line 7
+[18-Oct-2017 00:38:54 UTC] PHP Stack trace:
+[18-Oct-2017 00:38:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:0
+[18-Oct-2017 00:38:54 UTC] PHP   2. displayCheckoutHistory() /home/ubuntu/workspace/gorozco/lab/lab5/checkoutHistory.php:40
+[18-Oct-2017 19:57:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-admin
+        WHERE username = 'dafddsfasdf'
+        AND   passowrd = 'da39a3ee' at line 2' in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php on line 19
+[18-Oct-2017 19:57:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-admin
+        WHERE username = 'dafddsfasdf'
+        AND   passowrd = 'da39a3ee' at line 2' in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php on line 19
+[18-Oct-2017 19:59:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-admin
+        WHERE username = 'dafddsfasdf'
+        AND   passowrd = 'da39a3ee' at line 2' in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php on line 19
+[18-Oct-2017 19:59:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-admin
+        WHERE username = 'dafddsfasdf'
+        AND   passowrd = 'da39a3ee' at line 2' in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php on line 19
+[18-Oct-2017 19:59:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-admin
+        WHERE username = 'gorozco'
+        AND   passowrd = 'da39a3ee5e6b' at line 2' in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php on line 19
+[18-Oct-2017 19:59:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-admin
+        WHERE username = 'gorozco'
+        AND   passowrd = 'da39a3ee5e6b' at line 2' in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php on line 19
+[18-Oct-2017 20:00:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-admin
+        WHERE username = 'gorozco'
+        AND   passowrd = 'da39a3ee5e6b' at line 2' in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php on line 19
+[18-Oct-2017 20:00:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'passowrd' in 'where clause'' in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php on line 19
+[18-Oct-2017 20:00:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'passowrd' in 'where clause'' in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php(19): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/gorozco/lab/lab6/loginProcess.php on line 19
+[18-Oct-2017 20:14:44 UTC] PHP Fatal error:  Call to undefined function displayUsers() in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 16
+[18-Oct-2017 20:14:44 UTC] PHP Stack trace:
+[18-Oct-2017 20:14:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[18-Oct-2017 20:16:19 UTC] PHP Fatal error:  Call to undefined function displayUsers() in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 16
+[18-Oct-2017 20:16:19 UTC] PHP Stack trace:
+[18-Oct-2017 20:16:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[18-Oct-2017 20:19:20 UTC] PHP Fatal error:  Call to undefined function displayUsers() in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 16
+[18-Oct-2017 20:19:20 UTC] PHP Stack trace:
+[18-Oct-2017 20:19:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[18-Oct-2017 20:28:13 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 10
+[18-Oct-2017 20:28:13 UTC] PHP Stack trace:
+[18-Oct-2017 20:28:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[18-Oct-2017 20:28:13 UTC] PHP   2. displayUsers() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:33
+[25-Oct-2017 19:48:02 UTC] PHP Fatal error:  Call to undefined function getDepartmentInfo() in /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php on line 34
+[25-Oct-2017 19:48:02 UTC] PHP Stack trace:
+[25-Oct-2017 19:48:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php:0
+[25-Oct-2017 20:07:48 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php on line 97
+[25-Oct-2017 20:10:24 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php on line 106
+[25-Oct-2017 20:11:12 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php on line 106
+[25-Oct-2017 20:11:16 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php on line 106
+[25-Oct-2017 20:11:58 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php on line 106
+[25-Oct-2017 20:13:27 UTC] PHP Warning:  include(../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php on line 8
+[25-Oct-2017 20:13:27 UTC] PHP Stack trace:
+[25-Oct-2017 20:13:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php:0
+[25-Oct-2017 20:13:27 UTC] PHP Warning:  include(): Failed opening '../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php on line 8
+[25-Oct-2017 20:13:27 UTC] PHP Stack trace:
+[25-Oct-2017 20:13:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php:0
+[25-Oct-2017 20:13:27 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php on line 9
+[25-Oct-2017 20:13:27 UTC] PHP Stack trace:
+[25-Oct-2017 20:13:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php:0
+[25-Oct-2017 20:16:13 UTC] PHP Fatal error:  Call to a member function execute() on a non-object in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 19
+[25-Oct-2017 20:16:13 UTC] PHP Stack trace:
+[25-Oct-2017 20:16:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:16:13 UTC] PHP   2. displayUsers() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:46
+[25-Oct-2017 20:16:20 UTC] PHP Warning:  include(../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php on line 8
+[25-Oct-2017 20:16:20 UTC] PHP Stack trace:
+[25-Oct-2017 20:16:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php:0
+[25-Oct-2017 20:16:20 UTC] PHP Warning:  include(): Failed opening '../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php on line 8
+[25-Oct-2017 20:16:20 UTC] PHP Stack trace:
+[25-Oct-2017 20:16:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php:0
+[25-Oct-2017 20:16:20 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php on line 9
+[25-Oct-2017 20:16:20 UTC] PHP Stack trace:
+[25-Oct-2017 20:16:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/addUser.php:0
+[25-Oct-2017 20:16:23 UTC] PHP Fatal error:  Call to a member function execute() on a non-object in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 19
+[25-Oct-2017 20:16:23 UTC] PHP Stack trace:
+[25-Oct-2017 20:16:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:16:23 UTC] PHP   2. displayUsers() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:46
+[25-Oct-2017 20:17:13 UTC] PHP Warning:  include(../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 10
+[25-Oct-2017 20:17:13 UTC] PHP Stack trace:
+[25-Oct-2017 20:17:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:17:13 UTC] PHP Warning:  include(): Failed opening '../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 10
+[25-Oct-2017 20:17:13 UTC] PHP Stack trace:
+[25-Oct-2017 20:17:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:17:13 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 11
+[25-Oct-2017 20:17:13 UTC] PHP Stack trace:
+[25-Oct-2017 20:17:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:21:28 UTC] PHP Warning:  include(../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 10
+[25-Oct-2017 20:21:28 UTC] PHP Stack trace:
+[25-Oct-2017 20:21:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:21:28 UTC] PHP Warning:  include(): Failed opening '../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 10
+[25-Oct-2017 20:21:28 UTC] PHP Stack trace:
+[25-Oct-2017 20:21:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:21:28 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 11
+[25-Oct-2017 20:21:28 UTC] PHP Stack trace:
+[25-Oct-2017 20:21:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:22:21 UTC] PHP Warning:  include(../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 10
+[25-Oct-2017 20:22:21 UTC] PHP Stack trace:
+[25-Oct-2017 20:22:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:22:21 UTC] PHP Warning:  include(): Failed opening '../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 10
+[25-Oct-2017 20:22:21 UTC] PHP Stack trace:
+[25-Oct-2017 20:22:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:22:21 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 11
+[25-Oct-2017 20:22:21 UTC] PHP Stack trace:
+[25-Oct-2017 20:22:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:22:25 UTC] PHP Warning:  include(../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 10
+[25-Oct-2017 20:22:25 UTC] PHP Stack trace:
+[25-Oct-2017 20:22:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:22:25 UTC] PHP Warning:  include(): Failed opening '../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 10
+[25-Oct-2017 20:22:25 UTC] PHP Stack trace:
+[25-Oct-2017 20:22:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:22:25 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 11
+[25-Oct-2017 20:22:25 UTC] PHP Stack trace:
+[25-Oct-2017 20:22:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/admin.php:0
+[25-Oct-2017 20:34:34 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'genderF' in 'field list'' in /home/ubuntu/workspace/gorozco/lab/lab6/updateUser.php:30
+Stack trace:
+#0 /home/ubuntu/workspace/gorozco/lab/lab6/updateUser.php(30): PDOStatement->execute()
+#1 /home/ubuntu/workspace/gorozco/lab/lab6/updateUser.php(40): getUserInfo('34')
+#2 {main}
+  thrown in /home/ubuntu/workspace/gorozco/lab/lab6/updateUser.php on line 30
+[25-Oct-2017 20:41:35 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/gorozco/lab/lab6/updateUser.php on line 29
+[25-Oct-2017 20:41:35 UTC] PHP Stack trace:
+[25-Oct-2017 20:41:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/updateUser.php:0
+[25-Oct-2017 20:41:35 UTC] PHP   2. getUserInfo() /home/ubuntu/workspace/gorozco/lab/lab6/updateUser.php:41
+[25-Oct-2017 20:41:54 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/gorozco/lab/lab6/updateUser.php on line 29
+[25-Oct-2017 20:41:54 UTC] PHP Stack trace:
+[25-Oct-2017 20:41:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/gorozco/lab/lab6/updateUser.php:0
+[25-Oct-2017 20:41:54 UTC] PHP   2. getUserInfo() /home/ubuntu/workspace/gorozco/lab/lab6/updateUser.php:41
+[27-Oct-2017 20:43:02 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 75
+[27-Oct-2017 20:55:32 UTC] PHP Parse error:  syntax error, unexpected '$user' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/gorozco/lab/lab6/admin.php on line 75

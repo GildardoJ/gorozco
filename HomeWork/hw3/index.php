@@ -17,15 +17,46 @@
             $keyword = $_GET['category'];
         }
         
-        $imageURLs = getImageURLs($keyword);
+        if (isset($_GET['sort'])){
+            
+            $imageURLs = getImageURLs($keyword,$imageDescription,$price,$sort);
         
-        print_r($imageURLs);
+        }else{
+            $imageURLs = getImageURLs($keyword,$imageDescription,$price);
+            echo " ELSE ";
+        }
+        
+        
+        //print_r($imageURLs);
         
         //Display last 5 images!
         
         $backgroundImage = $imageURLs[array_rand($imageURLs)];
     }
+    
+    function checkIFSelected($option){
+        
+        if($option ==$_GET['sort']){
+            return "selected";
+        }
+    }
 
+
+function display($imageURLs,$imageDescription){
+    echo "<div id='box' >";
+    
+    for ($i = 0; $i < 5; $i++){
+        //echo"<br/> ";
+        echo "<img src='" . $imageURLs[$i] . "' width= '200' > Price: " . $price[$i] ;
+       
+            
+            
+        echo "<br/> " .$imageDescription[$i] . " <br/>";
+       
+    }
+    
+    echo "</div>";
+}
     
 ?>
 
@@ -58,19 +89,18 @@
         <form>
             <div id="formBox">
                 <input type="text" name="keyword" placeholder ="Keyword" value="<?=$_GET['keyword']?>"/>
-                <input type="radio" id="priceSort" name="priceSort" value="price"
-                
-                <?php
-                    if($_GET['priceSort']=="price"){
-                        echo "checked";
-                    }
-                
-                ?>
-                
-                >
-                
-                <label for ="priceSort"> Sort by price </label>
                
+                
+                <select name="sort">
+                <option value=""> Sort by </option>
+                <option  <?=checkIFSelected('best_seller')?>>best_seller</option>
+                <option <?=checkIFSelected('price')?>>price</option>
+                <option <?=checkIFSelected('price_low')?> >price_low</option>
+                <option <?=checkIFSelected('price_high')?> >price_high</option>
+                <option <?=checkIFSelected('rating_high')?> >rating_high</option>
+                <option <?=checkIFSelected('new')?> >New</option>
+            </select>
+                
                 <input type="submit" value="Search" />
             </div>
         </form>
@@ -87,11 +117,8 @@
                     exit;
                 }
             }
-            
-            for ($i = 0; $i < 5; $i++){
-                echo "<img src='" . $imageURLs[$i] . "' width= '200' >";
-                //echo "<img class='image-object' src='img/".$playerPics[0].".jpg' alt='Picture of card'>";
-            }
+            echo $sort .  " result of sort ";
+            display($imageURLs,$imageDescription);
             
         ?>
         <br/>
