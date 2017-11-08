@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Sorting Numbers</title>
+<script>
+            function testingNumbers (form) {
+                var TestVar = form.number1.value;
+                var test2 = form.number2.value;
+                var test3 = form.number3.value;
+                var num = [TestVar, test2, test3];
+                
+                
+                var test = true;
+             if(num[0] > 50 || num[0] < 1)
+             {
+                document.getElementById("error").innerHTML = "Number 1 not in the bounds";  
+                test = false;
+                
+             }
+              if(num[1] > 50 || num[1] < 1)
+             {
+                document.getElementById("error").innerHTML = "Number 2 not in the bounds";        
+                                test = false;
+
+             }
+              if(num[2] > 50 || num[2] < 1)
+             {
+                document.getElementById("error").innerHTML = "Number 3 not in the bounds";   
+                                test = false;
+
+             }
+                num.sort();
+            if(test ==true)
+            {
+                document.getElementById("highest").innerHTML = "Highest Number: " + num[2];
+                document.getElementById("asc").innerHTML = "The number in ascending order are: " + num[0] + "," + num[1] + " ," + num[2];
+
+            }
+              //  alert ("You typed: " + num[0] + " " + num[1] + " " + num[2]);
+            }
+    </script>
+    </head>
+    <body>
+        
+        <h1> Sorting Numbers</h1>
+        <p>Enter 3 numbers 1 to 50:</p>
+
+        <form method="GET">
+           Number 1: <input type="text" name="number1" value=""/> 
+           <br>
+             <br>
+
+           Number 2: <input type="text" name="number2" value=""/> 
+            <br>
+            <br>
+           Number 3: <input type="text" name="number3" value=""/> 
+           <br>
+           <br>
+         
+         <input type="button" name ="button" value ="Submit" onClick = testingNumbers(this.form)>
+         
+        
+
+         
+        </form>
+    
+    <p id="error"></p>
+    <h2 id="highest"> </h2>
+    <h3 id="asc"> </h3>
+    
+    
+    
+        
+    </body>
+</html>
