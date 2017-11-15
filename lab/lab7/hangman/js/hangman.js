@@ -18,6 +18,7 @@
     for (var letter of board){
     document.getElementById("word").innerHTML += letter + " ";
     }
+    
     function initBoard(){
         
         for (var i =0; i < selectedWord.length;i++){

@@ -29,25 +29,31 @@ function getUserInfo($userId) {
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $record = $stmt->fetch();
-    print_r($record);
-    
+    //print_r($record);
     return $record;
 
 
 }
 
 if (isset($_GET['updateUserForm'])){
+    
     $sql = "UPDATE tc_user 
             SET firstName = :fName,
-                lastName = :lName
+                lastName = :lName,
+                gender = :gender,
             WHERE userId = :userId ";
     $namedParameters = array();
     $namedParameters[":fNmae"] = $_GET['firstName'];
     $namedParameters[":lName"] = $_GET['lastName'];
-    $namedParameters["::userId"] = $_GET['userId'];
+    $namedParameters[":userId"] = $_GET['userId'];
+    $namedParameters[":gender"] = $_GET['gender'];
     
-    $stmt = $conn->prepare();
+    $stmt = $conn->prepare($sql);
     $stmt->execute($namedParameters);
+    
+    $redordd = $stmt->fetch();
+    
+    return $recordd;
 }
 
 if (isset($_GET['userId'])){
