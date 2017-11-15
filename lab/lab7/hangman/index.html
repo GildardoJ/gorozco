@@ -20,132 +20,36 @@
         <div class='container text-center'>
             <header>
                <h1>Hangman</h1>
-              <h4></h4>
+               <h4>Javascript Edition</h4>
             </header>
             
             <div id="word"></div>
             <div id="letters">
-                
                <!-- 
                <input type="text" id="letterBox" />
                <button id="letterBtn">Submit!</button>></button>
                 -->
-                
             </div>
             
+            <div id="won">
+                <h2>You Won!</h2>
+                <button class="replayBtn btn btn-success">Play Again</button>
+            </div>
+            <div id="lost">
+                <h2>You Lost!</h2>
+                <button class="replayBtn btn btn-warning">Play Again</button>
+            </div>
+
             <div id="man">
                <img src="img/stick_0.png" id="hangImg">
             </div>
-        </div>
+        </div>            
+            
         
-        <script> //javascript by default
+        <script src="js/hangman.js"> //javascript by default
                 // page is read page by page so we can't use variables that havent been declared in the
                 // previous lines. 
                 
-            $("#letterBtn").click( function(){ 
-                //alert("hi");
-                //updateImage();
-                
-                var boxVal = $("#letterBox").val();
-                alert(boxVal);
-                
-            }); // jQuery 
-            
-            $(".letter").click( function(){ alert("hi"); }); // click event, when any button is clicked. 
-            
-            function updateImage(){
-                //document.getElementById("man").innerHTML = "<img src = 'img/stick_5.png'>"
-                //$("#man").html("<img src = 'img/stick_5.png'>"); //jQuery $ is a funciton. accessing element by its id with '#' or '.'
-                $("img").attr("src","img/stick_3.png"); // another way to change the src image.
-                
-            }
-            
-            var selectedWord = ""; // set as global?
-            var selectedHint = "";
-            var board = "";
-            var remainingGuesses = 6;
-            var words = ["snake", "monkey", "beetle", "pig", "otter"];
-            var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 
-                            'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
-                            'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-                
-            startGame();
-            
-            
-            function startGame(){
-                
-                pickWord();
-                initBoard();
-                updateBoard();
-                createLetters();
-            }
-            
-            function pickWord(){
-                var randomInt = Math.floor( Math.random() * words.length ); // use of var for variable makes the variable only valid in the function. 
-                selectedWord = words[randomInt].toUpperCase();
-                //console.log(selectedWord);
-               
-            }
-            
-            function updateBoard(){
-                for (var letter of board){
-                    document.getElementById("word").innerHTML += letter + " ";
-                }
-                
-            }
-            
-            function initBoard(){
-                
-                for (var i =0; i < selectedWord.length;i++){
-                    
-                    board += "_";
-                }
-                
-                console.log(board);
-            }
-            
-            function createLetters(){
-                
-                for (var letter of alphabet){
-                    
-                    $("#letters").append("<button class = 'letter' id='"+letter+"'>" + letter + "</button>");
-                }
-            }
-            
-            function checkLetter(letter){
-                
-                var positions = []; // declared empty array.
-                
-                for (var i=0 ; i < selectedWord; i ++){
-                    
-                    if (letter == selectedWord[i]){
-                        
-                        positions.push(i);
-                        
-                    }
-                }
-                
-                if (positions.length > 0){
-                    
-                    updateWord(positions, letter);
-                    
-                }else{
-                    
-                    remainingGuesses--;
-                    $("#hangImg").attr("src","img/stick_" + (6 - remainingGuesses) + ".png" );
-                    
-                }
-                
-            }
-            //events , all.
-            
-            $(".letter").click( function(){ 
-                //alert($(this).attr("id")); 
-                checkLetter( $(this).attr("id") );
-                
-            }); // click event, when any button is clicked. 
-                                                                // display attribute of button, the id. 
-        
         </script>
         
     </body>
