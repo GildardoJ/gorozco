@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel = "stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <title>AJAX: Sign Up Page</title>
+        <link  href="css/styles.css" rel="stylesheet" type="text/css" />
+        <style type="text/css" id="diigolet-chrome-css">
+        
+            .bg-1 {
+                background-color: #1abc9c;
+                    color: #ffffff;
+            }
+            
+            .bg-4 { 
+                background-color: #2f2f2f;
+                color: #ffffff;
+            }
+            
+            .container-fluid {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            
+            body {
+                font: 20px "Montserrat", sans-serif;
+                line-height: 1.8;
+                
+                color: #f5f67;
+            }
+            
+            p {font-size: 16px;}
+            
+            #submits{
+                color: purple;
+            }
+        </style>
+
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+    
+    function getCity(){
+        //alert($("#zip").val());
+        $.ajax({
+            
+            type: "GET",  // method that the web api is using. 
+            url: "http://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php", // use http only, becuase the server doesnt support https. 
+            dataType: "json",  // type of data received  on server call
+            data: { "zip": $("#zip").val() }, // case sensitive, 
+            success: function(data,status) {
+                //alert(data.longitude);
+                var city = data.city;
+                var un = "undefined";
+                //alert(status);
+                if(data.city == undefined){
+                    
+                     $("#zipValidation").html("Zip code not found");
+                     $("#zipValidation").css("color","red");
+                }else{
+                     $("#zipValidation").html("");
+                     $("#zipValidation").css("color","green");
+                }
+                
+                $("#city").html(data.city);
+                $("#lat").html(data.latitude);
+                $("#long").html(data.longitude);
+                
+                
+            
+            },
+            complete: function(data,status) { //optional, used for debugging purposes
+            //alert(status);
+            }
+        
+        });//ajax
+     }   //function
+     
+     function getCounties(){
+         //alert($("#stateId").val());
+        $.ajax({
+        
+            type: "GET",
+            url: "http://itcdland.csumb.edu/~milara/ajax/countyList.php",
+            dataType: "json",
+            data: { "state": $("#stateId").val() },
+            success: function(data,status) {
+                //alert(data[0].county);
+                
+                $("#countyId").html("<option>Select One</option>");
+                for( var i=0; i < data.length; i++){
+                    $("#countyId").append("<option>"+data[i].county+"</option>");
+                }
+            
+            },
+            complete: function(data,status) { //optional, used for debugging purposes
+                //alert(status);
+            }
+        
+        });//ajax
+         
+     }
+     
+     function checkPassword(){
+         var pass = $("#1stPass").val();
+         alert (pass);
+     }
+     
+     function checkUsername(){
+        //alert("HELLO");
+        var user = $("#username").val();
+        //alert(user);
+     
+          $.ajax({
+        
+            type: "get",
+            url: "checkUsername.php",
+            dataType: "json",
+            data: { "username": $("#username").val() },
+            success: function(data,status) {
+                //alert(data[0].username);
+                
+                for( var i=0; i < data.length; i++){
+                    if(data['username'][i].username == user ){
+                        alert("USERNAME TAKEN");
+                    }
+                }
+                
+                if (!data){
+                    alert("USERNAME ")
+                }
+              
+            },
+            complete: function(data,status) { //optional, used for debugging purposes
+                //alert(status);
+            }
+        
+        });//ajax
+     }
+     //Events
+    $(document).ready( function(){
+    
+        $("#zip").change( function() { getCity(); });  //jQuery
+        $("#stateId").change( function() { getCounties(); });
+        $("#username").change( function() { checkUsername(); });
+        
+        
+    } ); // document ready
+    
+ 
+</script>
+</head>
+<body id="dummybodyid">
+    <div class="container-fluid bg-1 text-center">
+        <h1> Sign Up Form </h1>
+    </div>
+    
+    <div class="container-fluid bg-2 text-center">
+        <table style="width:100%">
+            <form onsubmit="return false" id= "submitForm">
+                <fieldset>
+                    <tr>
+                        <td>First Name: </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Email: </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Zip Code: </td>
+                        <td><input type="text" id= "zip"></td>
+                        <td><span style="color:red" id="zipValidation"></span></td>
+                    </tr>
+                    <tr>
+                        <td>City:</td>
+                        <td><span id="city"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Latitude:</td>
+                        <td><span id="lat"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Longitude:</td>
+                        <td> <span id="long"></span></td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td>
+                            <select name="state" id="stateId">
+                               <option value="">Select One</option>
+                               <option value="ca"> California</option>
+                               <optoin value="ny"> New York</optoin>
+                               <option value="tx"> Texas</option>
+                               <option value="va"> Virginia</option>
+                            </select> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Select a County:</td>
+                        <td><select id="countyId"></select></td>
+                    </tr>
+                    <tr>
+                        <td>Desired Username:</td>
+                        <td><input type="text" id="username"></td>
+                        
+                    </tr>
+                    <tr>
+                        <td><span style="color:red" id="usernameValidation"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" id="1stPass"></td>
+                    </tr>
+                    <tr>
+                        <td>Type Password Again:</td>
+                        <td><input type="password" id="2ndPass"></td>
+                    </tr>
+                    <tr>
+                        <br>
+                    </tr>
+                     
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" href="#" class="btn btn-default btn-lg" value="Sign up!" id="submits"></td>
+                        
+                    </tr>
+                </fieldset>
+            </form>
+        </table>
+    </div>
+
+</body>
+<footer class="container-fluid bg-4 text-center">
+  <p>CST336 Lab 8 </a></p> 
+</footer>
+</html>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+
+var frm = $('#submitForm');
+
+frm.submit( function(){
+    var pass1 = $("#1stPass").val();
+    var pass2 = $("#2ndPass").val();
+    //alert (pass2);   
+    //alert (pass1);
+    if(pass1 != pass2){
+        alert ("Retype Password");
+    }     
+         
+});
+
+$("#username").change( function(){
+     //alert($(this).val()); //showing the username entered, for testing purposes
+     
+     $.ajax({
+         type:"get",
+         url:"usernameLookup.php",
+         data:{ "username":$(this).val()},
+         
+         success: function(data,status){
+             //alert(data);
+             if(data=="Available"){
+                 $("#usernameValidation").html("Available!");
+                 $("#usernameValidation").css("color","green");
+             }else{
+                 $("#usernameValidation").html("Username already taken!");
+                 $("#usernameValidation").css("color","red");
+             }
+         }
+     });
+});
+</script>
