@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel = "stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <style type="text/css" id="diigolet-chrome-css" ></style>
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <title>AJAX API HW 5</title>
+        <script>
+             function getSort(){
+                //alert($("#zip").val());
+                $.ajax({
+                              
+                    type: "GET",  // method that the web api is using. 
+                    url: "http://api.walmartlabs.com/v1/search?apiKey=4q62wjkngrg5cn84343jfz8f&query=" + "$('#keyword').val()" + "&categoryId=3944&sort=" + "$('#sort').val()" + "&ord=des",
+                   // use http only, becuase the server doesnt support https. 
+                    dataType: "json",  // type of data received  on server call
+                    data: { "sort": $("#sort").val() }, // case sensitive, 
+                    success: function(data,status) {
+                        alert(data.longitude);
+                        var city = data.city;
+                        alert(status);
+                        if(data.city == undefined){
+                            
+                             $("#zipValidation").html("Zip code not found");
+                             $("#zipValidation").css("color","red");
+                        }else{
+                             $("#zipValidation").html("");
+                             $("#zipValidation").css("color","green");
+                        }
+                        
+                        $("#city").html(data.city);
+                        $("#lat").html(data.latitude);
+                        $("#long").html(data.longitude);
+                        
+                    },
+                    complete: function(data,status) { //optional, used for debugging purposes
+                    //alert(status);
+                    }
+                        
+                });//ajax
+             }   //function
+             
+             $(document).ready( function(){
+                 $("#sort").change( function() { getSort(); });
+             });
+        </script>
+    </head>
+<body>
+    
+    <form onsubmit="return false" id="submitForm">
+        Search: 
+        <input type="text" id="keyword"><br>
+        Sort: 
+        <select name="sort" id="sort">
+            <option value= "">Sort by?</option>
+            <option value= "new">New</option>
+            <option value= "price">Price</option>
+            <option value= "price_low">Price Low</option>
+        </select>
+        
+    </form>
+    
+</body>
+<footer class="container-fluid bg-4 text-center">
+  <p>CST336 Lab 8 </a></p> 
+</footer>
+</html>
+
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+
+</script>
