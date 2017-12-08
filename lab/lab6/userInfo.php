@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 if(!isset($_SESSION['username'])){ // validates that admin has indeed logged in.
@@ -16,8 +17,9 @@ if(!isset($_SESSION['username'])){ // validates that admin has indeed logged in.
     $stmt->execute();
     $records = $stmt->fetchAll();
     
-    print_r($records);
+    //print_r($records);
 
+    //echo $records[0]['firstName'];
 
 
 
@@ -28,14 +30,14 @@ if(!isset($_SESSION['username'])){ // validates that admin has indeed logged in.
     <head>
         <title> </title>
     </head>
-    <body>
+    <body><br><br>
         <?php
-            echo $record['firstName'] . " " . $records['lastName'];
-            echo "<br/ > Email: " .$redords['email'];
-            echo "<br/ > UniversityId: " .$redords['universityId'];
-            echo "<br/ > gender: " .$redords['gender'];
-            echo "<br/ > phone: " .$redords['phone'];
-            echo "<br/ > role: " .$redords['role'];
+            echo $records[0]['firstName'] . " " . $records[0]['lastName'];
+            echo "<br/ > Email: " .$records[0]['email'];
+            echo "<br/ > UniversityId: " .$records[0]['universityId'] ."";
+            echo "<br/ > gender: " .$records[0]['gender'] ."";
+            echo "<br/ > phone: " .$records[0]['phone']."";
+            echo "<br/ > role: " .$records[0]['role']."";
         ?>
         
 

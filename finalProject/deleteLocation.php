@@ -1,10 +1,10 @@
 <?php
 
     include("../../dbConnection.php");
-    $conn = getDatabaseConnection();
+    $conn = getDatabaseConnection('location');
     
-    $sql = "DELETE FROM tc_user
-        WHERE userId = " . $_GET['userId'];
+    $sql = "DELETE FROM locations
+        WHERE locationId = " . $_GET['locationId'];
         
     $stmt=$conn->prepare($sql);
     $stmt->execute();

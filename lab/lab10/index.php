@@ -54,10 +54,10 @@
     
     <script>
       $(document).ready(function(){    
-   $("img").click(function(){    
-        $("img").animate({width: "500px"});
-    });
-});
+           $("img").click(function(){    
+                $("img").animate({width: "500px"});
+            });
+     });
         
     </script>
     </head>

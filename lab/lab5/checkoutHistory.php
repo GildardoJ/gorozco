@@ -1,10 +1,10 @@
 <?php
 
 function displayCheckoutHistory(){
-    
+    echo "at funciton";
     include '../../dbConnection.php';
     
-    $conn = getDatabaseConnection();
+    $conn = getDatabaseConnection("tcp");
     
     $sql = "SELECT * 
             FROM `tc_checkout` 

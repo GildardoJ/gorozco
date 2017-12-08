@@ -3,7 +3,6 @@
         include '../../dbConnection.php';
         $conn = getDatabaseConnection();
         
-        
         $sql = "SELECT *
                 FROM tc_admin
                 WHERE username = :username 

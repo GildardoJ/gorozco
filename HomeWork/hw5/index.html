@@ -10,34 +10,27 @@
         <title>AJAX API HW 5</title>
         <script>
              function getSort(){
-                //alert($("#zip").val());
+                alert($("#keyword").val());
                 $.ajax({
                               
-                    type: "GET",  // method that the web api is using. 
-                    url: "http://api.walmartlabs.com/v1/search?apiKey=4q62wjkngrg5cn84343jfz8f&query=" + "$('#keyword').val()" + "&categoryId=3944&sort=" + "$('#sort').val()" + "&ord=des",
+                    type: "getComputedStyle",  // method that the web api is using. 
+                    url: "api/walmart.php",
                    // use http only, becuase the server doesnt support https. 
                     dataType: "json",  // type of data received  on server call
-                    data: { "sort": $("#sort").val() }, // case sensitive, 
+                    data: { "keyword": $("#keyword").val() }, // case sensitive, 
                     success: function(data,status) {
-                        alert(data.longitude);
-                        var city = data.city;
+                        alert(data.keyword);
                         alert(status);
-                        if(data.city == undefined){
-                            
-                             $("#zipValidation").html("Zip code not found");
-                             $("#zipValidation").css("color","red");
-                        }else{
-                             $("#zipValidation").html("");
-                             $("#zipValidation").css("color","green");
+                        
+                        if (!data){
+                            alert("USERNAME ")
                         }
                         
-                        $("#city").html(data.city);
-                        $("#lat").html(data.latitude);
-                        $("#long").html(data.longitude);
+                      
                         
                     },
                     complete: function(data,status) { //optional, used for debugging purposes
-                    //alert(status);
+                    alert(status);
                     }
                         
                 });//ajax
@@ -61,6 +54,7 @@
             <option value= "price_low">Price Low</option>
         </select>
         
+        <input type="submit" value="Search" />
     </form>
     
 </body>

@@ -2,6 +2,7 @@
     
     $keyword = $_GET['keyword'];
     $sort = "new";
+    echo $keyword;
     
     $curl = curl_init();
     curl_setopt_array($curl, array( 
@@ -16,6 +17,10 @@
       ),
     ));
     $jsonData = curl_exec($curl);
-    $data = json_decode($jsonData, true); //true makes it an array!
+    echo $jsonData;
+    
+    //$data = json_decode($jsonData, true); //true makes it an array!
 
+
+    //echo json_encode($data);
 ?>

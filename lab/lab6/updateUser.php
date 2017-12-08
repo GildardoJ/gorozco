@@ -51,7 +51,7 @@ if (isset($_GET['updateUserForm'])){
     $stmt = $conn->prepare($sql);
     $stmt->execute($namedParameters);
     
-    $redordd = $stmt->fetch();
+    $recordd = $stmt->fetch();
     
     return $recordd;
 }

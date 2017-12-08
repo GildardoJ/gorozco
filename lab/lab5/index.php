@@ -2,7 +2,7 @@
     
 include '../../dbConnection.php';
 
-$conn = getDatabaseConnection();
+$conn = getDatabaseConnection('tcp');
 
 function getDeviceTypes() {
     global $conn;
@@ -26,10 +26,10 @@ function displayDevices(){
     
     $sql = "SELECT * FROM tc_device WHERE 1";
     
-    
+
     if (isset($_GET['submit'])){
         
-         $namedParameters = array(); // associative array.
+        $namedParameters = array(); // associative array.
          
         
         if(!empty($_GET['deviceName'])){
@@ -49,8 +49,18 @@ function displayDevices(){
             $namedParameters[':dType'] = $_GET['deviceType'] ;
         }
         
-        if (isset($_GET['available'])){
-            
+        if (!empty($_GET['available'])){
+            $sql .= " AND status = :status";
+            $namedParameters[':status'] = "A";
+            //echo $_GET['status'];
+        }
+        
+        if(!empty($_GET['orderByName'])){
+            $sql .= " ORDER BY deviceName ";
+        }
+        
+        if(!empty($_GET['orderByPrice'])){
+            $sql .= " ORDER BY price ";
         }
         
     }//endIf (isset)
@@ -84,11 +94,11 @@ function displayDevices(){
         
         <h1> Technology Center: Checkout System </h1>
         
-        <form>
+        <form action="">
             Device: <input type="text" name="deviceName" placeholder="Device Name"/>
             Type: 
-            <select name="deviceType">
-                <option>Select One</option>
+            <select name="deviceType" id="device">
+                <option value="">Select One</option>
                 <?=getDeviceTypes()?>
             </select>
             
@@ -97,12 +107,12 @@ function displayDevices(){
             
             <br>
             Order by:
-            <input type="radio" name="orderBy" id="orderByName" value="name"/> 
-             <label for="oderByName"> Name </label>
-            <input type="radio" name="orderBy" id="orderByPrice" value="price"/> 
-             <label for="oderByPrice"> Price </label>
+            <input type="radio" name="orderByName" id="orderByName" value="name"/> 
+             <label for="oder"> Name </label>
+            <input type="radio" name="orderByPrice" id="orderByPrice" value="price"/> 
+             <label for="oder"> Price </label>
             
-            <input type="submit" value="Search!" name="submit" >
+            <input type="submit" name="submit" value="Search!" >
         </form>
         
         <hr>
