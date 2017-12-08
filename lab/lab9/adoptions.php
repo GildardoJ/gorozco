@@ -50,10 +50,7 @@
                 }
                 
             });//ajax
-            
-             
-            
-            
+        
         }); //.getLink click
         
     });//document.ready
