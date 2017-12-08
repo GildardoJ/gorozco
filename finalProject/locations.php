@@ -4,7 +4,7 @@ session_start();
 include 'inc/header.php';
 
 include '../../dbConnection.php';
-$conn = getDatabaseConnection('location');
+$conn = getDatabaseConnection();
 
 
 function getCities() {
@@ -102,6 +102,7 @@ function displayLocations(){
     foreach($locations as $location) {
         
         //echo $location['locationId'] . " ";
+        echo "Location: ";
         echo "<a href='#'class='locationList' id='".$location['locationId']."'> ".$location['name']."  </a> " . " ";
         
         echo "<br />";
@@ -159,6 +160,7 @@ function displayLocations(){
             </div>
           </div>
         </div>
+        
 
 
  <?php

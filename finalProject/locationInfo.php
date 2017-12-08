@@ -3,7 +3,7 @@
 //session_start();
 
     include '../../dbConnection.php';
-    $conn = getDatabaseConnection('location');
+    $conn = getDatabaseConnection();
     
     $sql = "SELECT * 
             FROM locations 
