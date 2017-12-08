@@ -1,7 +1,7 @@
 <?php
 
 
-function getDatabaseConnection($dbname= 'tcp'){
+function getDatabaseConnection(){
     
     $host = 'localhost';//cloud 9
     //$dbname = 'tcp';
