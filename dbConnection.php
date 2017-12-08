@@ -4,7 +4,7 @@
 function getDatabaseConnection(){
     
     $host = 'localhost';//cloud 9
-    //$dbname = 'tcp';
+    $dbname = 'location';
     $username = 'root';
     $password = '';
     
@@ -14,8 +14,8 @@ function getDatabaseConnection(){
         $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
         $host = $url["host"];
         $dbname = substr($url["path"], 1);
-        $username = $url[""];
-        $password = $url[""];
+        $username = $url["user"];
+        $password = $url["pass"];
     } 
     
     //creates db connection
