@@ -68,44 +68,47 @@
  
  ?>
  
-        
-    <script>
-    
-        $(document).ready( function(){
-            alert($(this).attr('id'));
-             $(".locationList").click( function(){
-                 
+         <div class="jumbotron">
+             <h2> List of Locations</h2>
+         </div>
+         <script>
+            $(document).ready( function(){
+                //alert($(this).attr('id'));
                  alert($(this).attr('id'));
-                 $('#locationInfoModal').modal("show");
-                 $("#locationInfo").html("<img src='img/loading.gif'>");
+                 $(".locationList").click( function(){
+                     //alert($(this).attr('id'));
+                     $('#locationInfoModal').modal("show");
+                     $("#locationInfo").html("<img src='img/loading.gif'>");
+                     $.ajax({
+         
+                         type: "get",
+                         url: "api/getLocationInfo.php",
+                         dataType: "json",
+                         data: JSON.stringify({ "locationId": $(this).attr('id')}),
+                         success: function(data,status) {
+                         
+                            //alert(data);
+                            $("#locationinfo").html(" Name: " + data.name + "<br>" +  " <img src='img/Its-Beach.jpg'><br >" );   
+                          
+                            $("#locationModalLabel").html(data.name);                   
+                            
+                         },
+                         complete: function(data,status) { //optional, used for debugging purposes
+                         //alert(status);
+                         }
+                         
+                     });//ajax
                  
-                 $.ajax({
-     
-                     type: "get",
-                     url: "api/getLocationInfo.php",
-                     dataType: "json",
-                     data: { "locationId": $(this).attr('id')},
-                     success: function(data,status) {
-                     
-                        alert(data);
-                        $("#locationinfo").html(" Name: " + data.name + "<br>" +  " <img src='img/Its-Beach.jpg'><br >" );   
-                      
-                        $("#locationModalLabel").html(data.name);                   
-                        
-                     },
-                     complete: function(data,status) { //optional, used for debugging purposes
-                     //alert(status);
-                     }
-                     
-                 });//ajax
-             
-             }); //.getLink click
-        });//document.ready
-    </script>
+                 }); //.getLink click
+            });//document.ready
+        </script>
 
+         
+         <div>
+         <fieldset>
             <br>
             
-        <form active="">
+          <form active="">
               Search Location Name: <input type="text" name="name" placeholder="location name"/>
               City: 
               <select name="city" id="city">
@@ -121,9 +124,11 @@
               
               
               <input type="submit" name="submit" value="Search!">
-        </form>
+         </form>
          
          <?=displayLocations()?>
+        
+         
  
     <?php
         

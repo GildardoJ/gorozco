@@ -1,7 +1,7 @@
 
 <?php
     session_start();
-    include 'inc/headerAdmin.php';
+    //include 'inc/headerAdmin.php';
     
     if (!isset($_SESSION['username'])) { //checks whether admin has logged in
         header("Location: index.php");
