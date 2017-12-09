@@ -1,7 +1,7 @@
 <?php
 
     include("../../dbConnection.php");
-    $conn = getDatabaseConnection();
+    $conn = getDatabaseConnection('location');
     
     $sql = "DELETE FROM locations
         WHERE locationId = " . $_GET['locationId'];

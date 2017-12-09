@@ -4,15 +4,12 @@ session_start();
 
 
 if (!isset($_SESSION['username'])) { //checks whether admin has logged in
-    
     header("Location: index.php");
     exit();
-    
 }
 
 include '../../dbConnection.php';
-$conn = getDatabaseConnection();
-
+$conn = getDatabaseConnection('location');
 
 function displayLocations() {
     global $conn;
@@ -24,13 +21,13 @@ function displayLocations() {
     $users = $statement->fetchAll(PDO::FETCH_ASSOC);
     //print_r($users);
     return $users;
+    
+    
 }
-
     include 'inc/headerAdmin.php';
 ?>
 
 
-        
         <div class="jumbotron">
           <h1> Add/Delete Locations</h1>
           
@@ -68,7 +65,11 @@ function displayLocations() {
                 
                 echo "[<a href='updateLocation.php?locationId=".$location['locationId']."'> Update </a> ]";
                 echo "[<a href='deleteLocation.php?locationId=".$location['locationId']."'> Delete </a> ]";
-                
+                echo "<form action='deleteLocation.php' style='display:inline' onsubmit='return confirmDelete(\"".$locaiton['name']."\")'>
+                         <input type='hidden' name='locationId' value='".$locationId['locationId']."' />
+                         <input type='submit' value='Delete'>
+                      </form>
+                    ";
                 
                 echo "<br />";
                 
