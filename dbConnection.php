@@ -4,7 +4,7 @@
 function getDatabaseConnection($dbname = 'tcp'){
     
     $host = 'localhost';//cloud 9
-    //$dbname = 'location'; 
+    //$dbname = 'tcp'; 
     $username = 'root';
     $password = '';
     

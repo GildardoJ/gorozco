@@ -1,32 +1,33 @@
 
 <?php
-session_start();
-
-
-if (!isset($_SESSION['username'])) { //checks whether admin has logged in
-    header("Location: index.php");
-    exit();
-}
-
-include '../../dbConnection.php';
-$conn = getDatabaseConnection('location');
-
-function displayLocations() {
-    global $conn;
-    $sql = "SELECT * 
-            FROM locations
-            ORDER BY locationId";
-    $statement = $conn->prepare($sql);
-    $statement->execute();
-    $users = $statement->fetchAll(PDO::FETCH_ASSOC);
-    //print_r($users);
-    return $users;
-    
-    
-}
+    session_start();
     include 'inc/headerAdmin.php';
-?>
+    
+    if (!isset($_SESSION['username'])) { //checks whether admin has logged in
+        header("Location: index.php");
+        exit();
+    }
+    
+    include '../../dbConnection.php';
+    $conn = getDatabaseConnection('location');
+    
+    function displayLocations() {
+        global $conn;
+        $sql = "SELECT * 
+                FROM locations
+                ORDER BY locationId";
+        $statement = $conn->prepare($sql);
+        $statement->execute();
+        $locations = $statement->fetchAll(PDO::FETCH_ASSOC);
+        //print_r($users);
+        return $locations;
+    }
+    
 
+    include 'inc/headerAdmin.php';
+
+
+?>
 
         <div class="jumbotron">
           <h1> Add/Delete Locations</h1>

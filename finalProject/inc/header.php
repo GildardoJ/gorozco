@@ -26,12 +26,9 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-item nav-link active" href="locations.php">Home <span class="sr-only">(current)</span></a>
-              
-              <a class="nav-item nav-link" href="about.php">About Us</a>
-              <a class="nav-item nav-link" href="loginProcess.php">Admin Login</a>
+              <a class="nav-item nav-link" href="logout.php">Logout</a>
+              <a class="nav-item nav-link" href="index.php">Admin Login</a>
             </div>
           </div>
         </nav>
-        
-        
         
