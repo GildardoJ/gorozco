@@ -35,7 +35,5 @@
           </div>
         </nav>
         
-         <div class="jumbotron">
-             <h2> List of Locations</h2>
-         </div>
+        
         

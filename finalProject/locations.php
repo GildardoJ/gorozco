@@ -67,44 +67,51 @@
  }
  
  ?>
- 
+    <div class="jumbotron">
+        <h2> List of Locations</h2>
+    </div>
         
     <script>
     
         $(document).ready( function(){
-            alert($(this).attr('id'));
+            //alert($(this).attr('id'));
              $(".locationList").click( function(){
                  
-                 alert($(this).attr('id'));
+                 //alert($(this).attr('id'));
                  $('#locationInfoModal').modal("show");
                  $("#locationInfo").html("<img src='img/loading.gif'>");
                  
                  $.ajax({
-     
-                     type: "get",
+                    
+                     type: "GET",
                      url: "api/getLocationInfo.php",
                      dataType: "json",
-                     data: { "locationId": $(this).attr('id')},
+                     data: { "locationId": $(this).attr('id') },
+                       
                      success: function(data,status) {
                      
                         alert(data);
-                        $("#locationinfo").html(" Name: " + data.name + "<br>" +  " <img src='img/Its-Beach.jpg'><br >" );   
+                        //alert(data.street);
+                        
+                        $("#locationInfo").html(" " + data.name + "<br>" + 
+                                                " <img src='img/Its-Beach.jpg'><br >" );   
                       
-                        $("#locationModalLabel").html(data.name);                   
+                        $("#locationNameModalLabel").html(data.city);                   
                         
                      },
                      complete: function(data,status) { //optional, used for debugging purposes
-                     //alert(status);
+                        //alert(status);
                      }
                      
                  });//ajax
              
              }); //.getLink click
         });//document.ready
+        
+ 
+        
     </script>
 
-            <br>
-            
         <form active="">
               Search Location Name: <input type="text" name="name" placeholder="location name"/>
               City: 
@@ -125,6 +132,27 @@
          
          <?=displayLocations()?>
  
+        <!-- Modal -->
+        <div class="modal" id="locationInfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="locationNameModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                   <div id="locationInfo"></div> 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        
     <?php
         
          include 'inc/footer.php';

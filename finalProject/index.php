@@ -7,7 +7,10 @@
 
 
         <div class="jumbotron">
-          <h1> Admin Login</h1>
+              <h1> Admin Login</h1>
+        </div>
+        
+        
      
         <form method="POST" action="loginProcess.php">
             

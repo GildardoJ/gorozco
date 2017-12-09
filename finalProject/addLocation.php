@@ -2,11 +2,11 @@
 session_start();
 
 if(!isset($_SESSION['username'])){ // validates that admin has indeed logged in.
-    
+
     header("location: index.php");
 }
     include '../../dbConnection.php';
-    $conn = getDatabaseConnection();
+    $conn = getDatabaseConnection('location');
     
     
 function getLength(){
