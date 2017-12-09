@@ -1,8 +1,7 @@
-
 <?php
  session_start();
  
- include 'inc/header.php';
+ include 'inc/header.php';  
  
  include '../../dbConnection.php';
  $conn = getDatabaseConnection('location');
@@ -21,51 +20,12 @@
      //return $locations;
      
      foreach($locations as $location) {
-             
              echo "<option>" . $location['city'] . "</option>";
-             
      }
  }
  
  ?>
- 
- <script>
-     $(document).ready( function(){
-         //alert($(this).attr('id'));
-         $(".locationList").click( function(){
-             
-             alert($(this).attr('id'));
-             $('#locationInfoModal').modal("show");
-             //$("#locationInfo").html("<img src='img/loading.gif'>");
-             $.ajax({
- 
-                 type: "GET",
-                 url: "locationInfo.php",
-                 dataType: "json",
-                 data: { "locationId": $(this).attr('id')},
-                 success: function(data,status) {
-                 
-                    alert(data);
-                    $("#locationinfo").html(" Name: " + data.name + "<br>" +
-                                       " <img src='img/Its-Beach.jpg'><br >" + 
-                                        data.city);   
-                  
-                    $("#locationModalLabel").html(data.name);                   
-                    
-                 
-                 },
-                 complete: function(data,status) { //optional, used for debugging purposes
-                 //alert(status);
-                 }
-                 
-             });//ajax
-         
-         }); //.getLink click
-         
-     });//document.ready
- </script>
- 
- <?php
+  <?php
  
  function displayLocations(){
      global $conn;
@@ -101,7 +61,7 @@
      foreach($locations as $location) {
          
          //echo $location['locationId'] . " ";
-         echo "<a href='#'class='locationList' id='".$location['locationId']."'> ".$location['name']."  </a> " . " ";
+         echo "<a href='#' class='locationList' id='".$location['locationId']."'> ".$location['name']."  </a> " . " ";
          
          echo "<br />";
          
@@ -110,9 +70,43 @@
      
  }
  
- 
- 
  ?>
+ <script>
+     $(document).ready( function(){
+         //alert($(this).attr('id'));
+         $(".locationList").click( function(){
+             
+             //alert($(this).attr('id'));
+             $('#locationInfoModal').modal("show");
+             $("#locationInfo").html("<img src='img/loading.gif'>");
+             $.ajax({
+ 
+                 type: "GET",
+                 url: "api/getLocationInfo.php",
+                 dataType: "json",
+                 data: { "locationId": $(this).attr('id')},
+                 success: function(data,status) {
+                 
+                    //alert(data);
+                    $("#locationinfo").html(" Name: " + data.name + "<br>" +
+                                       " <img src='img/Its-Beach.jpg'><br >" );   
+                  
+                    $("#locationModalLabel").html(data.name);                   
+                    
+                 
+                 },
+                 complete: function(data,status) { //optional, used for debugging purposes
+                 //alert(status);
+                 }
+                 
+             });//ajax
+         
+         }); //.getLink click
+         
+     });//document.ready
+ </script>
+ 
+
  
          <div class="jumbotron">
              <h2> List of Locations</h2>
@@ -138,7 +132,8 @@
               <input type="submit" name="submit" value="Search!">
          </form>
          
-         </div>
+         <?=displayLocations()?>
+       
          <!-- Modal -->
          <div class="modal fade" id="locationInfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
            <div class="modal-dialog" role="document">
@@ -150,7 +145,7 @@
                  </button>
                </div>
                <div class="modal-body">
-                    <div id="locaitonInfo"></div> 
+                    <div id="locationinfo"></div> 
                </div>
                <div class="modal-footer">
                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -160,10 +155,7 @@
          </div>
  
  
-  <?php
-         displayLocations();
+    <?php
         
-         
-       
          include 'inc/footer.php';
- ?> 
+     ?> 

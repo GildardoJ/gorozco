@@ -2,19 +2,16 @@
     include 'inc/header.php';
     
      function getPetList() {
-            include '../../dbConnection.php';
-            $conn = getDatabaseConnection("c9");
+        include '../../dbConnection.php';
+        $conn = getDatabaseConnection("c9");
 
+        $sql = "SELECT *
+                FROM adoptees"; 
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $record = $stmt->fetchAll(PDO::FETCH_ASSOC);//expecting only one record
 
-            $sql = "SELECT *
-                    FROM adoptees"; 
-                    
-                            
-            $stmt = $conn->prepare($sql);
-            $stmt->execute();
-            $record = $stmt->fetchAll(PDO::FETCH_ASSOC);//expecting only one record
- 
-            return $record;
+        return $record;
     }
 ?>
 
@@ -36,7 +33,7 @@
                 data: { "id": $(this).attr('id')},
                 success: function(data,status) {
                 
-                   //alert(data);
+                   alert(data);
                    $("#petInfo").html(" Age: " + data.age + "<br>" +
                                       " <img src='img/" + data.pictureURL + "'><br >" + 
                                        data.description);   
