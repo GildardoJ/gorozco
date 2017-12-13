@@ -6,23 +6,28 @@
 ?>
 
 
-        <div class="jumbotron">
+        <div class="container-fluid bg-1 text-center">
               <h1> Admin Login</h1>
         </div>
         
-        
-     
-        <form method="POST" action="loginProcess.php">
-            
-            Username: <input type="text" name="username"/> <br />
-            
-            Password: <input type="password" name="password"/> <br />
-            
-            <input type="submit" name="login" value="Login"/>
-            
-            
-        </form>
-        
+        <div class="container-fluid bg-2 text-center">
+              <table style="width:100%"> 
+                    <form method="POST" action="loginProcess.php">
+                        <fieldset>   
+                            <label> Username:</label>
+                             <input type="text" name="username"/> <br />
+                        </fieldset>
+                       <fieldset>   
+                            <label> Password :</label>
+                             <input type="password" name="password"/> <br />
+                        </fieldset>
+                        <fieldset> 
+                           <input type="submit" class="btn btn-secondary" name="login" value="Login"/>
+                        </fieldset> 
+                        
+                    </form>
+                </table>
+        </div>
         
         <?php
         

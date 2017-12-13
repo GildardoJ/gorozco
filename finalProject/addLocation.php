@@ -93,9 +93,11 @@ include 'inc/headerAdmin.php';
 
 
 
-        <div class="jumbotron">
+        <div class="container-fluid bg-1 text-center">
             <h2> New Location?</h2>
+        </div>
         
+        <div class="container-fluid bg-2 text-center">
         <fieldset>
          <form>
             
@@ -130,11 +132,13 @@ include 'inc/headerAdmin.php';
                             
                     </select>
                     <br />
-                <input type="submit" name="addLocationForm" value="Add Location!"/>
+                <input type="submit" class="btn btn-secondary" name="addLocationForm" value="Add Location!"/><br>
         </form>
     
         </fieldset>
         
         <?php getlength() ?>
-    </body>
-</html>
+        
+        <?php
+            include 'inc/footer.php';
+        ?>

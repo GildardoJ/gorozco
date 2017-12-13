@@ -91,9 +91,11 @@ if (isset($_GET['locationId'])){
 include 'inc/headerAdmin.php';
 ?>
 
-        <div class="jumbotron">
+        <div class="container-fluid bg-1 text-center">
             <h2> Update Location?</h2>
+        </div>
         
+        <div class="container-fluid bg-2 text-center">
         <fieldset>
             
          <form>
@@ -132,5 +134,10 @@ include 'inc/headerAdmin.php';
         </form>
     
         </fieldset>
-    </body>
-</html>
+        
+        </div>
+    <?php
+    
+    include 'inc/footer.php';
+    
+    ?>

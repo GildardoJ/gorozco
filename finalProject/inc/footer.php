@@ -6,7 +6,7 @@
         -->
         
          
-        <footer>
+        <footer class="container-fluid bg-4 text-center">
                 <br>
                 Disclaimer: The information is this site is not real.
         </footer>

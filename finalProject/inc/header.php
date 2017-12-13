@@ -2,6 +2,7 @@
 <html>
     <head>
         <title> Photo Locations </title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
        <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
        --> <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
@@ -12,8 +13,34 @@
         
         
         <style>
+            .bg-1 {
+                background-color: #1abc9c;
+                    color: #ffffff;
+            }
+            
+            .bg-4 { 
+                background-color: #2f2f2f;
+                color: #ffffff;
+            }
+            
+            .container-fluid {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            
             body {
-                text-align: center;
+                font: 20px "Montserrat", sans-serif;
+                line-height: 1.8;
+                
+                color: #f5f67;
+            }
+            fieldset{
+                
+            }
+            p {font-size: 16px;}
+            
+            #submits{
+                color: purple;
             }
         </style>
    

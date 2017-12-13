@@ -58,16 +58,15 @@
      
      foreach($locations as $location) {
          
-         //echo $location['locationId'] . " ";
-         echo "<a href='#' class='locationList' id='".$location['locationId']."'> ".$location['name']."  </a> " . " ";
+         echo "<tr><a href='#' class='locationList' id='".$location['locationId']."'> ".$location['name']."  </a> " . " ";
          
-         echo "<br />";
+         echo "</tr><br />";
          
      }
  }
  
  ?>
-    <div class="jumbotron">
+    <div class="container-fluid bg-1 text-center">
         <h2> List of Locations</h2>
     </div>
         
@@ -90,11 +89,10 @@
                        
                      success: function(data,status) {
                      
-                        alert(data);
+                        //alert(data);
                         //alert(data.street);
                         
-                        $("#locationInfo").html(" " + data.name + "<br>" + 
-                                                " <img src='img/Its-Beach.jpg'><br >" );   
+                        $("#locationInfo").html(" " + data.name + "<br>"  );   
                       
                         $("#locationNameModalLabel").html(data.city);                   
                         
@@ -111,6 +109,8 @@
  
         
     </script>
+    
+    <div class="container-fluid bg-2 text-center">
 
         <form active="">
               Search Location Name: <input type="text" name="name" placeholder="location name"/>
@@ -127,10 +127,14 @@
               <label for="orderByLocation"> Location </label>
               
               
-              <input type="submit" name="submit" value="Search!">
+              <input type="submit" class="btn btn-default btn-lg" name="submit" value="Search!">
         </form>
-         
-         <?=displayLocations()?>
+        
+        <div >
+            <table style="width:100%"> 
+             <?=displayLocations()?>
+             </table>
+        </div>
  
         <!-- Modal -->
         <div class="modal" id="locationInfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -152,6 +156,7 @@
           </div>
         </div>
     
+    </div>
         
     <?php
         
