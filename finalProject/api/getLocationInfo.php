@@ -2,7 +2,7 @@
 
 //session_start();
 
-    include '../../dbConnection.php';
+    include '../../../dbConnection.php';
     $conn = getDatabaseConnection('location');
     
     $sql = "SELECT * , YEAR(CURDATE())
