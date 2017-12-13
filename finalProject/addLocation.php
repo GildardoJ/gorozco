@@ -5,7 +5,7 @@ if(!isset($_SESSION['username'])){ // validates that admin has indeed logged in.
 
     header("location: index.php");
 }
-    include '../../dbConnection.php';
+    include '../dbConnection.php';
     $conn = getDatabaseConnection('location');
     
     

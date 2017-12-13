@@ -8,7 +8,7 @@
         exit();
     }
     
-    include '../../dbConnection.php';
+    include '../dbConnection.php';
     $conn = getDatabaseConnection('location');
     
     function displayLocations() {
